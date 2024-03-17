@@ -11,7 +11,7 @@ app.use(parser.urlencoded({extended:true}))
 app.use(express.static("public"))
 //
 // mongoose.connect("mongodb+srv://sumanth_lade:mnudwwl4AxXmWTw3@cluster0.lppghe8.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/toDoList")
-mongoose.connect("mongodb+srv://sumanth_lade:sumanth123@cluster0.lppghe8.mongodb.net/toDoList")
+mongoose.connect("mongodb+srv://sumanth_lade:+"+${{secrets.pass}}+"@cluster0.lppghe8.mongodb.net/toDoList")
 const itemSchema=new mongoose.Schema({
   name:{
     type:String,
